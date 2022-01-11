@@ -1,11 +1,13 @@
 package client.converters.fromdecimal;
 
+import client.constants.HelperConstants;
+
 public class FromDecimal {
     private final double num;
     private final int base;
     private int integerPart;
     private double decimalPart;
-    private final int[] arr = new int[10];
+    private final int[] arr = new int[HelperConstants.ARRAY_LENGTH];
     private long ans;
     private int i = 0;
     public FromDecimal(double num, int base) {
@@ -29,7 +31,7 @@ public class FromDecimal {
             integerPart /= base;
         }
 
-        for (int i = 10 - 1; i >= 0; i--) {
+        for (int i = HelperConstants.ARRAY_LENGTH - 1; i >= 0; i--) {
             ans = ans * 10 + arr[i];
         }
 
