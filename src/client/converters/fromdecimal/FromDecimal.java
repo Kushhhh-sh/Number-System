@@ -19,20 +19,11 @@ public class FromDecimal {
 
     @Override
     public String toString() {
-        return "FromDecimal{" +
-                "ans=" + ans +
-                '}';
+        return ans;
     }
 
-
-//    @Override
-//    public String toString() {
-//        return "FromDecimal{" +
-//                "arr=" + Arrays.toString(arr) +
-//                '}';
-//    }
-
     void calculate() {
+        int a;
         while(integerPart != 0) {
             arr[digits++] = integerPart % base;
             integerPart /= base;
@@ -42,13 +33,20 @@ public class FromDecimal {
             if(base == 2 || base == 8) {
                 ans += Integer.toString(arr[i]);
             } else if(base == 16) {
-                ans += printHexa(arr[i]);
+                ans += printHex(arr[i]);
             }
         }
-        ans += '.';
+        if(decimalPart != 0) {
+            ans += '.';
+            for (int i = 0; i < HelperConstants.PRECISION; i++) {
+                a = (int) Math.floor(decimalPart * base);
+                ans += printHex(a);
+                decimalPart = (decimalPart * base) - a;
+            }
+        }
     }
 
-    char printHexa(int a) {
+    char printHex(int a) {
         return (a == 1) ? '1' : (a == 2) ? '2' : (a == 3) ? '3' : (a == 4) ? '4' : (a == 5) ? '5' : (a == 6) ? '6' : (a == 7) ? '7' :
                 (a == 8) ? '8' : (a == 9) ? '9' : (a == 10) ? 'A' : (a == 11) ? 'B' : (a == 12) ? 'C' : (a == 13) ? 'D' : (a == 14) ? 'E' :
                         (a == 15) ? 'F' : '0';
