@@ -26,15 +26,15 @@ public class Client {
         switch (choice) {
             case 1:
                 System.out.println("So You have selected Binary Number System!!");
-                DecimalToBinary binary = new DecimalToBinary(num);
+                System.out.println(new DecimalToBinary(num));
                 break;
             case 2:
                 System.out.println("So You have selected Octal Number System!!");
-                DecimalToOctal octal = new DecimalToOctal(num);
+                System.out.println(new DecimalToOctal(num));
                 break;
             case 3:
                 System.out.println("So You have selected Hexadecimal Number System!!");
-                DecimalToHexadecimal hexadecimal = new DecimalToHexadecimal(num);
+                System.out.println(new DecimalToHexadecimal(num));
                 break;
             default:
                 System.out.println("Please Enter a valid choice!!");
