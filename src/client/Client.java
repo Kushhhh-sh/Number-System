@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         double num = 0;
         int choice = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,8 +22,6 @@ public class Client {
             HelperConstants.PRECISION = Integer.parseInt(br.readLine());
             System.out.print("\nChoose from the following Number Systems: \n1. Binary\n2. Octal\n3. Hexadecimal\n\nYour Choice: ");
             choice = Integer.parseInt(br.readLine());
-        } catch (IOException e) {
-            System.out.println("Error Occured!!");
         } catch (NumberFormatException e) {
             System.out.println("Please enter a valid Input Value..!!\nRequired Value: Int OR Double");
             System.exit(0);
