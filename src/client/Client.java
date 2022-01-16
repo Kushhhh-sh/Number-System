@@ -11,8 +11,8 @@ import java.io.InputStreamReader;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        double num = 0;
-        int choice = 0;
+        double num;
+        int choice;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
             System.out.println("This is Number System!!");
