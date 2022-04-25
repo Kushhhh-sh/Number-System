@@ -1,1 +1,1 @@
-java client.Client
+java Client
