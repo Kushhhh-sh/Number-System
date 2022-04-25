@@ -1,7 +1,6 @@
-package client.binary;
+package converter;
 
-import client.constants.HelperConstants;
-import client.converters.fromdecimal.FromDecimal;
+import constants.HelperConstants;
 
 public class DecimalToBinary extends FromDecimal {
     public DecimalToBinary(double num) {

@@ -6,4 +6,4 @@
 <br>
 <br>
 
- ### Command for running the program in terminal.  `java client.Client`
+ ### Command for running the program in terminal.  `java Client`

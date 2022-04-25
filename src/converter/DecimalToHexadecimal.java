@@ -1,7 +1,6 @@
-package client.hexadecimal;
+package converter;
 
-import client.constants.HelperConstants;
-import client.converters.fromdecimal.FromDecimal;
+import constants.HelperConstants;
 
 public class DecimalToHexadecimal extends FromDecimal {
     public DecimalToHexadecimal(double num) {

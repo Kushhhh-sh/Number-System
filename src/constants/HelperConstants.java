@@ -1,4 +1,4 @@
-package client.constants;
+package constants;
 
 public class HelperConstants {
     public static final int BINARY_BASE = 2;
